@@ -10,15 +10,14 @@ define Package/luci-app-localmachines
   SECTION:=luci
   CATEGORY:=LuCI
   SUBMENU:=3. Applications
-  MAINTAINER:=foo <foo@bar.org>
+  MAINTAINER:=Fab Lab Berlin IT <it@fablab.berlin>
   TITLE:=Thing
   DEPENDS:=luci
   PKGARCH:=all
 endef
 
 define Package/luci-app-localmachines/description
-  Quick status and control script for OpenEVSE RAPI
-  Appears in Admin Status -> OpenEVSE
+  Local Machines Gateway (XMPP)
 endef
 
 define Build/Compile
