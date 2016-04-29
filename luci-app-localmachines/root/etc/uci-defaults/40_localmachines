@@ -1,0 +1,10 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null
+	delete ucitrack.localmachines
+	set ucitrack.localmachines=localmachines
+	commit ucitrack
+EOF
+
+rm -f /tmp/luci-indexcache
+exit 0

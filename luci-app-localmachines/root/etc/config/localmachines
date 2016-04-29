@@ -1,0 +1,6 @@
+config localmachines
+        option jabberpw 'super-secret'
+        option jabberid 'user@example.net'
+        option apiid 'foobarz'
+        option apikey '01234567890'
+        option locationid '42'
