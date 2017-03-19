@@ -11,7 +11,7 @@ define Package/luci-app-localmachines
   CATEGORY:=LuCI
   SUBMENU:=3. Applications
   MAINTAINER:=Fab Lab Berlin IT <it@fablab.berlin>
-  TITLE:=Thing
+  TITLE:=LocalMachines Gateway for OpenWRT. 
   DEPENDS:=luci
   PKGARCH:=all
 endef
@@ -32,7 +32,6 @@ define Package/luci-app-localmachines/install
 	mkdir -p $(1)/etc/config/
 	$(CP) ./root/etc/config/localmachines $(1)/etc/config/
 	$(INSTALL_DIR) $(1)/usr/bin
-	#$(LN) ../../usr/lib/lua/luci/model/cbi/localmachines/localmachines.lua $(1)/usr/bin/openevse
 endef
 
 $(eval $(call BuildPackage,luci-app-localmachines))
