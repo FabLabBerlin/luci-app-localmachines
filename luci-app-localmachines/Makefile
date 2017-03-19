@@ -29,7 +29,7 @@ endef
 define Package/luci-app-localmachines/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci
 	$(CP) ./luasrc/* $(1)/usr/lib/lua/luci
-	mkdir -p $(1)/etc/config/
+	mkdir -p $(1)/etc/config/ $(1)/etc/init.d/
 	$(CP) ./files/localmachines.conf $(1)/etc/config/localmachines
 	$(INSTALL_BIN) ./files/gateway.init $(1)/etc/init.d/gateway
 	$(INSTALL_BIN) ./files/gateway /root/gateway
