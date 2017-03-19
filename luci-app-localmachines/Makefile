@@ -30,7 +30,7 @@ define Package/luci-app-localmachines/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci
 	$(CP) ./luasrc/* $(1)/usr/lib/lua/luci
 	mkdir -p $(1)/etc/config/
-	$(CP) ./root/etc/config/localmachines $(1)/etc/config/
+	$(CP) ./files/localmachines.conf $(1)/etc/config/localmachines
 	$(INSTALL_BIN) ./files/gateway.init $(1)/etc/init.d/gateway
 	$(INSTALL_BIN) ./files/gateway /root/gateway
 	$(INSTALL_DIR) $(1)/usr/bin
