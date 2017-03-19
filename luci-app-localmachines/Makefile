@@ -32,7 +32,7 @@ define Package/luci-app-localmachines/install
 	mkdir -p $(1)/etc/config/ $(1)/etc/init.d/
 	$(CP) ./files/localmachines.conf $(1)/etc/config/localmachines
 	$(INSTALL_BIN) ./files/gateway.init $(1)/etc/init.d/gateway
-	$(INSTALL_BIN) ./files/gateway /root/gateway
+	$(INSTALL_BIN) ./files/gateway-mips /root/gateway
 	$(INSTALL_DIR) $(1)/usr/bin
 endef
 
